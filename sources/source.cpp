@@ -40,7 +40,7 @@ ns forwardPass(size_t arrSize)
     }
   }
 
-  delete(array);
+  delete[] array;
   auto stopTime = Time::now();
   std::chrono::duration<float> duration = stopTime - startTime;
   return std::chrono::duration_cast<ns>(duration / 1000);
@@ -71,7 +71,7 @@ ns backwardPass(size_t arrSize)
     }
   }
 
-  delete(array);
+  delete[] array;
   auto stopTime = Time::now();
   std::chrono::duration<float> duration = stopTime - startTime;
   return std::chrono::duration_cast<ns>(duration / 1000);
@@ -107,7 +107,7 @@ ns randomPass(size_t arrSize)
     }
   }
 
-  delete(array);
+  delete[] array;
   auto stopTime = Time::now();
   std::chrono::duration<float> duration = stopTime - startTime;
   return std::chrono::duration_cast<ns>(duration / 1000);
