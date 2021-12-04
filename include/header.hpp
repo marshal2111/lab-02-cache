@@ -16,5 +16,6 @@ typedef std::chrono::high_resolution_clock Time;
 typedef std::chrono::nanoseconds ns;
 
 void investigateCache();
+auto example() -> void;
 
 #endif // INCLUDE_HEADER_HPP_

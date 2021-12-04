@@ -15,6 +15,11 @@
  * 128 KB < 256 KB < 1024 KB < 6114 KB < 9171 KB
  */
 
+auto example() -> void
+{
+  throw std::runtime_error("not implemented");
+}
+
 ns forwardPass(size_t arrSize)
 {
   int* array = new int[arrSize];
