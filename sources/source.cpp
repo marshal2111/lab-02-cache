@@ -115,22 +115,22 @@ ns randomPass(size_t arrSize)
 
 void investigateCache()
 {
-  std::vector<int> cache_sizes {MIN_CACHE_SIZE, 
-                                L1_CACHE_SIZE, 
+  std::vector<int> cache_sizes {MIN_CACHE_SIZE,
+                                L1_CACHE_SIZE,
                                 L2_CACHE_SIZE,
                                 L3_CACHE_SIZE,
                                 MAX_CACHE_SIZE};
 
-  std::cout 
-    << "investigation:\n" 
+  std::cout
+    << "investigation:\n"
     << "\ttravel_variant: \"forward\"\n"
-    << "\texperiments:" 
+    << "\texperiments:"
     << std::endl;
 
   for (int i = 0; i < EXP_NUM; i++)
   {
     auto timeEllapsed = forwardPass(cache_sizes[i]);
-    std::cout 
+    std::cout
       << "\t- experiment:\n"
       << "\t\tnumber: " << i + 1 << std::endl
       << "\t\tinput_data:\n"
@@ -140,16 +140,16 @@ void investigateCache()
       << std::endl;
   }
 
-  std::cout 
-    << "investigation:\n" 
+  std::cout
+    << "investigation:\n"
     << "\ttravel_variant: \"backward\"\n"
-    << "\texperiments:" 
+    << "\texperiments:"
     << std::endl;
 
   for (int i = 0; i < EXP_NUM; i++)
   {
     auto timeEllapsed = backwardPass(cache_sizes[i]);
-    std::cout 
+    std::cout
       << "\t- experiment:\n"
       << "\t\tnumber: " << i + 1<< std::endl
       << "\t\tinput_data:\n"
@@ -159,16 +159,16 @@ void investigateCache()
       << std::endl;
   }
 
-  std::cout 
-    << "investigation:\n" 
+  std::cout
+    << "investigation:\n"
     << "\ttravel_variant: \"random\"\n"
-    << "\texperiments:" 
+    << "\texperiments:"
     << std::endl;
 
   for (int i = 0; i < EXP_NUM; i++)
   {
     auto timeEllapsed = randomPass(cache_sizes[i]);
-    std::cout 
+    std::cout
       << "\t- experiment:\n"
       << "\t\tnumber: " << i + 1<< std::endl
       << "\t\tinput_data:\n"
